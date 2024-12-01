@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-function App() {
+import Dashboard from "../src/components/Pages/Dashboard/Dashboard";
+import Login from "../src/components/Pages/Login/login";
+import Mensagens from "../src/components/Pages/Mensagens/mensagens";
+import Portal from "../src/components/Pages/Portal/portal";
+import Notas from "../src/components/Pages/Notas/notas";
+import Perfil from "../src/components/Pages/Perfil/perfil";
+import Recusenha from "../src/components/Pages/Recusenha/recusenha";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/mensagens" element={<Mensagens />} />
+        <Route path="/portal" element={<Portal />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/notas" element={<Notas />} />
+        <Route path="/perfil" element={<Perfil />} />
+        <Route path="/recuperar-senha" element={<Recusenha />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
-export default App;
+export default App; // Certifique-se de que há um export default aqui!

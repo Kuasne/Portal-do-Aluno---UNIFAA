@@ -1,12 +1,12 @@
+import { onCLS, onFID, onLCP } from "web-vitals";
+
+// Função para coletar as métricas e reportá-las
 const reportWebVitals = (onPerfEntry) => {
   if (onPerfEntry && onPerfEntry instanceof Function) {
-    import("web-vitals").then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-      getCLS(onPerfEntry);
-      getFID(onPerfEntry);
-      getFCP(onPerfEntry);
-      getLCP(onPerfEntry);
-      getTTFB(onPerfEntry);
-    });
+    // Usando as funções onCLS, onFID e onLCP
+    onCLS(onPerfEntry);
+    onFID(onPerfEntry);
+    onLCP(onPerfEntry);
   }
 };
 

@@ -6,93 +6,6 @@ body {
   background-color: #f4f4f4;
 }
 
-/* Estilos da Sidebar */
-.sidebar-perfil {
-  width: 250px;
-  height: 100vh;
-  background-color: #2d2d2d;
-  color: white;
-  padding: 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transition: all 0.3s ease;
-}
-
-.sidebar-perfil .logo {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.sidebar-perfil .logo img {
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-}
-
-.sidebar-perfil h1 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
-}
-
-.sidebar-perfil nav {
-  display: flex;
-  flex-direction: column;
-}
-
-.sidebar-perfil nav a {
-  color: #bbb;
-  text-decoration: none;
-  margin-bottom: 15px;
-  font-size: 1rem;
-  transition: color 0.3s, font-size 0.3s ease; /* Transição mais suave */
-}
-
-.sidebar-perfil nav a:hover {
-  color: #ff9d00;
-  font-size: 1.1rem; /* Efeito de aumento no hover */
-}
-
-/* Botão de menu em telas pequenas */
-.sidebar-perfil button {
-  display: none;
-}
-
-@media screen and (max-width: 768px) {
-  .sidebar-perfil {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-
-  .sidebar-perfil button {
-    display: block;
-    background-color: #ff9d00;
-    border: none;
-    padding: 10px;
-    color: white;
-    font-size: 1.5rem;
-    width: 100%;
-    text-align: left;
-  }
-
-  .sidebar-perfil nav {
-    display: none;
-    margin-top: 20px;
-  }
-
-  .sidebar-perfil nav.open {
-    display: flex;
-  }
-
-  .sidebar-perfil nav a {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
-}
 
 /* Estilos do botão Voltar */
 .voltar-btn {
@@ -110,7 +23,7 @@ body {
 }
 
 .voltar-btn:hover {
-  background-color: #ff9d00;
+  background-color: #10d680;
   transform: scale(1.1); /* Efeito de aumento no hover */
 }
 

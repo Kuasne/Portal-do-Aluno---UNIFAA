@@ -1,257 +1,144 @@
+/* Importando as diretrizes do Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Definições Globais */
 body {
-  font-family: Arial, sans-serif;
+  @apply bg-gradient-to-br from-teal-400 via-green-400 to-blue-500;
+  @apply font-sans text-gray-800;
   margin: 0;
   padding: 0;
-  background-image: -webkit-linear-gradient(45deg, #58c7d8, #00b58e);
 }
 
-/* Estilos da Sidebar */
+/* Sidebar */
 .sidebar {
-  width: 250px;
-  height: 100vh;
-  background-color: #2d2d2d;
-  color: white;
-  padding: 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transition: all 0.3s ease;
+  @apply fixed top-0 left-0 w-64 h-full bg-gray-900 text-white p-5 transition-all duration-300;
 }
 
 .sidebar .logo {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
+  @apply flex items-center mb-8;
 }
 
 .sidebar .logo img {
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
+  @apply rounded-full w-12 h-12 mr-4;
 }
 
 .sidebar h1 {
-  font-size: 1.5rem;
-  font-weight: bold;
+  @apply text-lg font-bold uppercase;
 }
 
 .sidebar nav {
-  display: flex;
-  flex-direction: column;
+  @apply flex flex-col;
 }
 
 .sidebar nav a {
-  color: #bbb;
-  text-decoration: none;
-  margin-bottom: 15px;
-  font-size: 1rem;
-  transition: color 0.3s;
+  @apply text-gray-400 text-sm mb-4 transition-colors duration-200 hover:text-green-500;
 }
 
 .sidebar nav a:hover {
-  color: #ff9d00; /* Cor de destaque ao passar o mouse */
+  @apply underline;
 }
 
 /* Botão de Menu em Telas Pequenas */
 .sidebar button {
-  display: none;
+  @apply hidden;
 }
 
-@media screen and (max-width: 768px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-
-  .sidebar button {
-    display: block;
-    background-color: #ff9d00;
-    border: none;
-    padding: 10px;
-    color: white;
-    font-size: 1.5rem;
-    width: 100%;
-    text-align: left;
-  }
-
-  .sidebar nav {
-    display: none;
-    margin-top: 20px;
-  }
-
-  .sidebar nav.open {
-    display: flex;
-  }
-
-  .sidebar nav a {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
-}
-
-/* Estilos para os Itens de Acesso Rápido */
-.quick-access-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.quick-access-item img {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 10px;
-}
-
-.quick-access-item span {
-  font-size: 1rem;
-  color: #333;
-}
-
-/* Estilos do Conteúdo Principal */
+/* Main Content */
 .main-content {
-  margin-left: 250px; /* Desloca o conteúdo principal para a direita */
-  transition: margin-left 0.3s ease;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  @apply ml-64 p-6 bg-white rounded-md shadow-md;
+  background-image: url("/src/img/logo.png"); /* Substitua pelo caminho correto */
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
 
-  background-image: url("/src/img/logo.png"); /* Substitua com o link correto da sua logo */
-  background-position: top left; /* Alinha a imagem no canto superior esquerdo */
-  background-repeat: no-repeat; /* Não repete a imagem */
-  background-size: 35%; /* Ajusta a imagem para caber sem perder qualidade */
-}
 .main-content h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  transition: color 0.3s; /* Efeito de transição para o texto */
+  @apply text-2xl font-bold text-center mb-4 text-gray-700;
 }
+
 .main-content h2 {
-  text-align: right;
-  font-size: 1rem;
-  margin-bottom: 20px;
-  transition: color 0.3s;
-  color: #333; /* Cor do texto */
-  margin-right: 20px;
+  @apply text-sm text-right mr-5 mb-5;
 }
 
 .main-content hr {
-  width: 100%;
-  height: 10px;
-  background-color: #303030;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: none;
-  border-radius: 5px;
-  transform: scale(1); /* Efeito de aumento no hover */
+  @apply my-6 border-t border-gray-300;
 }
 
-.main-content strong {
-  font-weight: bold;
-  transition: color 0.3s;
-  color: #333; /* Cor do texto */
-  cursor: pointer; /* Cursor padrão */
-  transform: scale(1); /* Efeito de aumento no hover */
-}
-
-.main-content strong:hover {
-  color: #ff9d00; /* Cor do texto ao passar o mouse */
-}
-
-/* Estilos para o Perfil */
-.profile .sidebar h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
-  background-color: #333;
-  padding: 10px;
-}
-
-.profile .sidebar ul {
-  list-style: none;
-}
-
-.profile .sidebar li {
-  padding: 10px;
-}
-
-.profile .sidebar li a {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.profile .sidebar li a:hover {
-  color: #ff9d00;
-  transform: scale(1.1); /* Efeito de aumento no hover */
-}
-
-/* Estilos para o Conteúdo */
-.content h1 {
-  font-size: 2rem;
-  text-align: center; /* Alinha o texto ao centro dentro do h1 */
-  margin: 0; /* Remove qualquer margem padrão */
-  color: #333; /* Cor do texto */
-  padding: 10px; /* Adiciona uma margem de 10px ao red or do texto */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  background-color: #f7f7f7;
-}
-
-.content strong {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-/* Estilos para o Botão de Voltar */
-.back-btn {
-  background-color: #ff9d00;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.back-btn:hover {
-  background-color: #ff9900;
-  transform: scale(1.1); /* Efeito de aumento no hover */
-}
-
+/* Perfil */
 .profile-image {
-  margin-right: 20px;
-  margin-left: 930px;
-  margin-top: -40px;
-  margin-bottom: 10px;
-  display: flex;
-  width: 100px; /* Ajuste o tamanho da imagem conforme necessário */
-  height: 100px;
-  border-radius: 50%; /* Torna a imagem redonda */
-  vertical-align: middle; /* Alinha verticalmente a imagem com o texto */
-  border: 2px solid #000000;
+  @apply block mx-auto mb-5 rounded-full w-32 h-32 border-4 border-gray-700 shadow-md;
 }
 
+/* Section */
+.section {
+  @apply mb-8;
+}
+
+.section-title {
+  @apply text-lg font-semibold mb-4 text-gray-700;
+}
+
+.notice-list li,
+.task-list li {
+  @apply mb-2 text-gray-600;
+}
+
+.calendar-table {
+  @apply w-full border-collapse bg-white shadow rounded-md overflow-hidden;
+}
+
+.calendar-table th,
+.calendar-table td {
+  @apply border px-4 py-2 text-left;
+}
+
+.calendar-table th {
+  @apply bg-gray-900 text-white;
+}
+
+.calendar-table tr:nth-child(even) {
+  @apply bg-gray-100;
+}
+
+.calendar-table tr:hover {
+  @apply bg-yellow-100;
+}
+
+/* Botão Enviar */
+.btn-enviar {
+  @apply bg-yellow-500 text-white py-2 px-4 rounded shadow-md transition-all duration-300 hover:bg-gradient-to-r hover:from-red-500 hover:via-yellow-500 hover:to-green-500;
+}
+
+.btn-enviar:hover {
+  transform: scale(1.1);
+}
+
+/* Rodapé */
+.footer {
+  @apply fixed bottom-0 left-0 w-full bg-gray-800 text-white text-center py-3;
+}
+
+/* Responsividade */
 @media screen and (max-width: 768px) {
   .main-content {
-    margin-left: 0;
+    @apply ml-0;
   }
-}
 
-.footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px;
+  .sidebar {
+    @apply w-full h-auto relative;
+  }
+
+  .sidebar button {
+    @apply block bg-yellow-500 text-white py-2 w-full text-left text-lg;
+  }
+
+  .sidebar nav {
+    @apply hidden mt-5;
+  }
+
+  .sidebar nav.open {
+    @apply flex flex-col;
+  }
 }

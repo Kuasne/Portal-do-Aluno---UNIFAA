@@ -20,7 +20,7 @@ const Portal = () => {
               <Link to="/mensagens">Mensagens</Link>
             </li>
             <li>
-              <Link to="/login">Sair</Link>
+              <Link to="/">Sair</Link>
             </li>
           </ul>
         </nav>
@@ -38,13 +38,54 @@ const Portal = () => {
         <h2 className="profile-h2">
           <strong>Lorenzo Gabriel Almeida Silva</strong>
         </h2>
-        <hr></hr>
-      </div>
+        <hr />
 
-      {/* ADICIONE MAIS CONTEÚDO AQUI */}
-      <div>
-        {/* Conteúdo adicional */}
-        {/*... */}
+        {/* Seção de Avisos */}
+        <section className="section">
+          <h2 className="section-title">Avisos Importantes</h2>
+          <ul className="notice-list">
+            <li>📌 Inscrições para monitoria abertas até 10/12.</li>
+            <li>📌 Prova final de UX/UI Designer: 06/12 às 19h.</li>
+            <li>📌 Férias começam em 23/12!</li>
+          </ul>
+        </section>
+
+        {/* Seção de Tarefas Pendentes */}
+        <section className="section">
+          <h2 className="section-title">Tarefas Pendentes</h2>
+          <ul className="task-list">
+            <li>✅ Entregar moodboard até 06/12.</li>
+            <li>✅ Revisar apresentação do projeto final.</li>
+            <li>✅ Estudar para a prova de UX/UI Designer.</li>
+          </ul>
+        </section>
+
+        {/* Seção de Calendário */}
+        <section className="section">
+          <h2 className="section-title">Calendário de Eventos</h2>
+          <table className="calendar-table">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Evento</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>15/12</td>
+                <td>Feira de Ciências</td>
+              </tr>
+              <tr>
+                <td>20/12</td>
+                <td>Prova final de Matemática</td>
+              </tr>
+              <tr>
+                <td>23/12</td>
+                <td>Início das Férias</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
       </div>
 
       {/* Rodapé */}

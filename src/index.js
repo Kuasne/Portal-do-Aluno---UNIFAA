@@ -13,5 +13,5 @@ ReactDOM.render(
 
 // Enviar dados para analytics (opcional)
 reportWebVitals((metric) => {
-  console.log(metric); // Substitua pela função de envio ao analytics, se necessário
+  console.log(metric); // Log para o console ou substitua pela função para enviar para o analytics
 });

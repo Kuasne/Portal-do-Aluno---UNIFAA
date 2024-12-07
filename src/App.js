@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Dashboard from "../src/components/Pages/Dashboard/Dashboard";
 import Login from "../src/components/Pages/Login/login";
 import Mensagens from "../src/components/Pages/Mensagens/mensagens";
 import Portal from "../src/components/Pages/Portal/portal";
@@ -16,7 +15,6 @@ const App = () => {
         <Route path="/" element={<Login />} />
         <Route path="/mensagens" element={<Mensagens />} />
         <Route path="/portal" element={<Portal />} />
-        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/notas" element={<Notas />} />
         <Route path="/perfil" element={<Perfil />} />
         <Route path="/recuperar-senha" element={<Recusenha />} />

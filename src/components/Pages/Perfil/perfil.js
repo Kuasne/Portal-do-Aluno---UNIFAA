@@ -6,7 +6,7 @@ const Perfil = () => {
   return (
     <div className="perfil-page">
       {/* Sidebar */}
-      <div className="sidebar-perfil">
+      <div className="sidebar">
         <h1>Portal do Aluno</h1>
         <nav>
           <ul>
@@ -20,7 +20,7 @@ const Perfil = () => {
               <Link to="/mensagens">Mensagens</Link>
             </li>
             <li>
-              <Link to="/login">Sair</Link>
+              <Link to="/">Sair</Link>
             </li>
           </ul>
         </nav>
@@ -45,7 +45,7 @@ const Perfil = () => {
               className="perfil-image"
             />
           </div>
-
+          <hr></hr>
           {/* Informações do Aluno */}
           <div className="text-lg text-gray-700">
             <p className="mb-2">
@@ -60,10 +60,29 @@ const Perfil = () => {
               <span className="font-semibold">Curso:</span> Engenharia de
               Software
             </p>
+            <p className="mb-2">
+              <span className="font-semibold">Matrícula:</span> 2023001234
+            </p>
+          </div>
+          <hr></hr>
+
+          {/* Seção Extra */}
+          <div className="extra-section mt-8">
+            <h3 className="text-xl font-semibold text-gray-600 mb-4">
+              Informações Acadêmicas
+            </h3>
+            <p>
+              <span className="font-semibold">Semestre Atual:</span> 4º Semestre
+            </p>
+            <p>
+              <span className="font-semibold">Disciplinas Matriculadas:</span>{" "}
+              Estruturas de Dados, Banco de Dados, Programação Web
+            </p>
           </div>
         </div>
       </div>
-      <footer>
+
+      <footer className="footer">
         <p>&copy; 2023 - Todos os direitos reservados.</p>
       </footer>
     </div>

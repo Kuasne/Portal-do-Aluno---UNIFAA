@@ -1,12 +1,10 @@
 /* Garantir que o notas
 -page tenha display flex para dividir o conteúdo */
-.notas
--page {
+.notas -page {
   display: flex;
   min-height: 100vh; /* Garante que a página ocupe toda a altura da tela */
   overflow-x: hidden; /* Evita barra de rolagem horizontal */
 }
-
 
 /* Conteúdo principal (onde a tabela de notas estará) */
 .notas {
@@ -20,6 +18,12 @@
   box-sizing: border-box; /* Evita que o padding aumente a largura */
 }
 
+.notas-h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
 /* Estilo da tabela */
 table {
   width: 80%; /* Define que a tabela ocupará 80% do espaço disponível */
@@ -29,25 +33,26 @@ table {
   box-sizing: border-box;
 }
 
-th, td {
+th,
+td {
   padding: 12px 15px;
-  border: 1px solid #ddd;
+  border: 1px solid #1f2937;
   text-align: left;
 }
 
 th {
-  background-color: #2d3748;
+  background-color: #1f2937;
   color: white;
 }
 
 tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: white;
 }
 
 .tabela-tr {
   width: 100%;
   margin-bottom: 20px;
-  color: #333;
+  color: #111827;
   border-radius: 5px;
 }
 

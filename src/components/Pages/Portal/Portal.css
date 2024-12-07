@@ -33,7 +33,7 @@ body {
 }
 
 .sidebar nav a {
-  @apply text-gray-400 text-sm mb-4 transition-colors duration-200 hover:text-green-500;
+  @apply text-gray-400 text-sm mb-4 transition-colors duration-200 hover:text-yellow-500;
 }
 
 .sidebar nav a:hover {

@@ -73,11 +73,11 @@ const Portal = () => {
             <tbody>
               <tr>
                 <td>15/12</td>
-                <td>Feira de Ciências</td>
+                <td>Feira de Tecnologia</td>
               </tr>
               <tr>
                 <td>20/12</td>
-                <td>Prova final de Matemática</td>
+                <td>Prova final de UX/UI Designer</td>
               </tr>
               <tr>
                 <td>23/12</td>

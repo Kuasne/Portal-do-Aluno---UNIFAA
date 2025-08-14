@@ -1,0 +1,144 @@
+/* Importando as diretrizes do Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definições Globais */
+body {
+  @apply bg-gradient-to-br from-teal-400 via-green-400 to-blue-500;
+  @apply font-sans text-gray-800;
+  margin: 0;
+  padding: 0;
+}
+
+/* Sidebar */
+.sidebar {
+  @apply fixed top-0 left-0 w-64 h-full bg-gray-900 text-white p-5 transition-all duration-300;
+}
+
+.sidebar .logo {
+  @apply flex items-center mb-8;
+}
+
+.sidebar .logo img {
+  @apply rounded-full w-12 h-12 mr-4;
+}
+
+.sidebar h1 {
+  @apply text-lg font-bold uppercase;
+}
+
+.sidebar nav {
+  @apply flex flex-col;
+}
+
+.sidebar nav a {
+  @apply text-gray-400 text-sm mb-4 transition-colors duration-200 hover:text-yellow-500;
+}
+
+.sidebar nav a:hover {
+  @apply underline;
+}
+
+/* Botão de Menu em Telas Pequenas */
+.sidebar button {
+  @apply hidden;
+}
+
+/* Main Content */
+.main-content {
+  @apply ml-64 p-6 bg-white rounded-md shadow-md;
+  background-image: url("/src/img/logo.png"); /* Substitua pelo caminho correto */
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+.main-content h1 {
+  @apply text-2xl font-bold text-center mb-4 text-gray-700;
+}
+
+.main-content h2 {
+  @apply text-sm text-right mr-5 mb-5;
+}
+
+.main-content hr {
+  @apply my-6 border-t border-gray-300;
+}
+
+/* Perfil */
+.profile-image {
+  @apply block mx-auto mb-5 rounded-full w-32 h-32 border-4 border-gray-700 shadow-md;
+}
+
+/* Section */
+.section {
+  @apply mb-8;
+}
+
+.section-title {
+  @apply text-lg font-semibold mb-4 text-gray-700;
+}
+
+.notice-list li,
+.task-list li {
+  @apply mb-2 text-gray-600;
+}
+
+.calendar-table {
+  @apply w-full border-collapse bg-white shadow rounded-md overflow-hidden;
+}
+
+.calendar-table th,
+.calendar-table td {
+  @apply border px-4 py-2 text-left;
+}
+
+.calendar-table th {
+  @apply bg-gray-900 text-white;
+}
+
+.calendar-table tr:nth-child(even) {
+  @apply bg-gray-100;
+}
+
+.calendar-table tr:hover {
+  @apply bg-yellow-100;
+}
+
+/* Botão Enviar */
+.btn-enviar {
+  @apply bg-yellow-500 text-white py-2 px-4 rounded shadow-md transition-all duration-300 hover:bg-gradient-to-r hover:from-red-500 hover:via-yellow-500 hover:to-green-500;
+}
+
+.btn-enviar:hover {
+  transform: scale(1.1);
+}
+
+/* Rodapé */
+.footer {
+  @apply fixed bottom-0 left-0 w-full bg-gray-800 text-white text-center py-3;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .main-content {
+    @apply ml-0;
+  }
+
+  .sidebar {
+    @apply w-full h-auto relative;
+  }
+
+  .sidebar button {
+    @apply block bg-yellow-500 text-white py-2 w-full text-left text-lg;
+  }
+
+  .sidebar nav {
+    @apply hidden mt-5;
+  }
+
+  .sidebar nav.open {
+    @apply flex flex-col;
+  }
+}

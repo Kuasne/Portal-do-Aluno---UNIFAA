@@ -1,0 +1,79 @@
+/* Garantir que o notas
+-page tenha display flex para dividir o conteúdo */
+.notas -page {
+  display: flex;
+  min-height: 100vh; /* Garante que a página ocupe toda a altura da tela */
+  overflow-x: hidden; /* Evita barra de rolagem horizontal */
+}
+
+/* Conteúdo principal (onde a tabela de notas estará) */
+.notas {
+  margin-left: 250px; /* Faz o conteúdo começar após a sidebar */
+  padding: 30px;
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  flex-direction: column; /* Organiza o conteúdo na vertical */
+  width: 100%; /* Garantir que ocupe o restante da tela */
+  box-sizing: border-box; /* Evita que o padding aumente a largura */
+}
+
+.notas-h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+/* Estilo da tabela */
+table {
+  width: 80%; /* Define que a tabela ocupará 80% do espaço disponível */
+  max-width: 800px; /* Define uma largura máxima para a tabela */
+  margin: 0 auto; /* Centraliza a tabela horizontalmente */
+  border-collapse: collapse;
+  box-sizing: border-box;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  border: 1px solid #1f2937;
+  text-align: left;
+}
+
+th {
+  background-color: #1f2937;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: white;
+}
+
+.tabela-tr {
+  width: 100%;
+  margin-bottom: 20px;
+  color: #111827;
+  border-radius: 5px;
+}
+
+.tbody-tabela {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+/* Estilo para a média das notas */
+.media-notas {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo da header */
+.header-notas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}

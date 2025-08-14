@@ -1,0 +1,134 @@
+/* Definições globais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+
+/* Estilos do botão Voltar */
+.voltar-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #2d2d2d;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.voltar-btn:hover {
+  background-color: #10d680;
+  transform: scale(1.1); /* Efeito de aumento no hover */
+}
+
+/* Estilos do conteúdo principal */
+.perfil-container {
+  margin-left: 250px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: margin-left 0.3s ease, box-shadow 0.3s ease;
+}
+
+.perfil-container h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2d2d2d;
+  text-align: center;
+}
+
+.perfil-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 20px auto;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+
+  /* Efeito de sombra ao passar o mouse */
+  :hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+  }
+}
+.profile-image:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.text-lg {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.text-lg .font-semibold {
+  font-weight: bold;
+}
+
+/* Responsividade para telas pequenas */
+@media screen and (max-width: 768px) {
+  .perfil-container {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .voltar-btn {
+    font-size: 0.9rem;
+  }
+}
+
+/* Estilos para os itens de Acesso Rápido */
+.quick-access-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.quick-access-item img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.quick-access-item span {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Estilos do Footer */
+footer {
+  background-color: #2d2d2d;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+footer p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+footer a {
+  color: #ff9d00;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

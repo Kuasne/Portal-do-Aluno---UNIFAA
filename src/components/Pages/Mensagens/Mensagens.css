@@ -1,0 +1,13 @@
+.strong-msg {
+  font-size: 200%;
+  font-weight: bold;
+  text-align: center;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #333;
+  border-radius: 5px;
+  transition: color 0.3s;
+  cursor: pointer;
+}

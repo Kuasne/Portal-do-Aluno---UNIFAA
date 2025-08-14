@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Kuasne/Portal-do-Aluno---UNIFAA/static/css/main.b309b2b7.css",
+    "main.js": "/Kuasne/Portal-do-Aluno---UNIFAA/static/js/main.77d69357.js",
+    "static/media/logo.png": "/Kuasne/Portal-do-Aluno---UNIFAA/static/media/logo.244843c68122d8730107.png",
+    "index.html": "/Kuasne/Portal-do-Aluno---UNIFAA/index.html",
+    "main.b309b2b7.css.map": "/Kuasne/Portal-do-Aluno---UNIFAA/static/css/main.b309b2b7.css.map",
+    "main.77d69357.js.map": "/Kuasne/Portal-do-Aluno---UNIFAA/static/js/main.77d69357.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b309b2b7.css",
+    "static/js/main.77d69357.js"
+  ]
+}

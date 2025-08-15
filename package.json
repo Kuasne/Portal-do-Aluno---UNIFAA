@@ -1,6 +1,5 @@
 {
   "name": "unifaa-portal",
-  "homepage": "https://github.com/Kuasne/Portal-do-Aluno---UNIFAA",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

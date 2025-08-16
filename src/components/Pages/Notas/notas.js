@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./notas.css";
+import "./Notas.css";
 
 const Notas = () => {
   // Simulando dados de notas
